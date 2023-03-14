@@ -1,0 +1,23 @@
+<section>
+    <div class="container">
+        <h1 class="text-3">Цены на услуги</h1>
+        <table class="table table_one">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Услуга</th>
+            <th scope="col">Старая цена</th>
+            <th scope="col">Новая цена</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for table_i in price_table %}
+          <tr>
+            <td>{{table_i.pt_title}}</td>
+            <td><del>{{ table_i.pt_old_price}}</del></td>
+            <td>{{table_i.pt_new_price}}</td>
+          </tr>
+          {%endfor%}
+        </tbody>
+      </table>
+    </div>
+</section>
